@@ -1,0 +1,39 @@
+datasets:
+    # mesh_folder:
+    #     input_path: '/data/tejasr20/motion-diffusion-model/save/humanml_trans_enc_512/samples_humanml_trans_enc_512_000200000_seed10_the_person_sits_down_on_a_chair/sample00_rep00_obj/'
+deformation_transfer_path: 'transfer_data/smpl2smplx_deftrafo_setup.pkl'
+mask_ids_fname: 'transfer_data/smplx_mask_ids.npy'
+# mask_ids_fname: ''
+summary_steps: 100
+
+edge_fitting:
+    per_part: False
+
+optim:
+    type: 'trust-ncg'
+    # type: 'lbfgs'
+    maxiters: 100
+    gtol: 1e-06
+
+body_model:
+    model_type: "smplx"
+    gender: "neutral"
+    # ext: 'pkl'
+    folder: "transfer_data/body_models"
+    use_compressed: False
+    use_face_contour: True
+    smplx:
+        betas:
+            num: 10
+        expression:
+            num: 10
+# ip_path: "/data/tejasr20/motion-diffusion-model/save/humanml_trans_enc_512/samples_humanml_trans_enc_512_000200000_seed10_the_person_walked_around_in_a_circle_twice/sample00_rep00.mp4"
+ip_path : "/data/tejasr20/motion-diffusion-model/save/humanml_trans_enc_512/samples_humanml_trans_enc_512_000200000_seed10_a_person_sits_down_on_the_wooden_chair_and_then_stands_up_again/sample00_rep00.mp4"
+# ip_path : "/data/tejasr20/motion-diffusion-model/save/humanml_trans_enc_512/samples_humanml_trans_enc_512_000200000_seed10_A_person_punches_something_or_someone_in_a_manner_consistent_with_martial_arts/sample00_rep00.mp4"
+output_folder: '/data/tejasr20/summon/data/mdm/'
+# smplx_output_folder: 'smplx'
+output_name: 'chair3'
+
+cuda: True
+device: 0
+# num_workers: 

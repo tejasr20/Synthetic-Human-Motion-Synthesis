@@ -1,0 +1,15 @@
+sklearn
+configargparse
+smplx
+opencv-python
+pyrender
+trimesh
+open3d
+times
+DateTime
+tensorboard
+ipdb
+chumpy
+torchgeometry
+openmesh
+mesh-to-sdf
